@@ -32,7 +32,7 @@ if [ -z $user ]
 then
 dialog  --backtitle "$titleback" --sleep 3 --infobox "Completes los datos para poder ingresar" $input
 else
-contra=$( dialog --stdout --backtitle "$titleback" --inputbox "Ingrese su contraseña" $input )
+contra=$( dialog --stdout --backtitle "$titleback" --insecure --password "Ingrese su contraseña" $input )
 if [ $? -ne 0 ]
 then
 dialog  --backtitle "$titleback" --yesno "Desea salir del programa" $input
